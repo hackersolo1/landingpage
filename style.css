@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--preto-100);
+  overflow-x: hidden;
+}
+
+:root {
+  --preto-100: rgba(0, 0, 0, 1);
+  --preto-40: rgba(0, 0, 0, 0.4);
+  --preto-25: rgba(0, 0, 0, 0.25);
+  --shamrock: rgba(53, 225, 143, 1);
+  --eastern-blue: rgba(37, 150, 190, 1);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--preto-40);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+header h1 {
+  font-family: "Orbitron";
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--eastern-blue),
+    var(--shamrock),
+    var(--eastern-blue)
+  );
+  background-size: 200%;
+  background-clip: text;
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200%;
+  }
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background: url(https://agenciath2.com/_2025/wp-content/themes/agencia_th2/img/bg-featured-home.png);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero .esquerda {
+  height: inherit;
+  align-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero .esquerda p {
+  font-size: 40px;
+  font-family: "Space Grotesk";
+  margin-bottom: 40px;
+  animation: animacaoAparecer 1s ease-in-out 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.hero .esquerda p:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.hero .esquerda p:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.hero .esquerda a {
+  padding: 30px;
+  border: 1.5px solid var(--shamrock);
+  background: transparent;
+  color: white;
+  font-size: 26px;
+  font-family: "Space Grotesk";
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  animation: animacaoAparecer 1s ease-in-out 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 1.5s;
+
+}
+
+.hero .esquerda a:hover {
+  background: var(--shamrock);
+  color: var(--preto-100);
+  box-shadow: 0px 0px 10px var(--shamrock);
+  
+}
+
+.hero .direita {
+  /* garante alinhamento e espaço para o embed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.hero .direita iframe {
+  width: 550px;
+  height: 600px;
+}
+
+.hero .direita p {
+  color: white;
+  font-family: "Orbitron";
+  text-align: center;
+  font-size: 25px;
+  animation: animacaoAparecer 1s ease-in-out 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 2s;
+}
+
+#sobre-mim {
+  width: 100vw;
+  align-content: center;
+  padding: 20px;
+}
+
+#sobre-mim #sobreMimTitulo {
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--eastern-blue),
+    var(--shamrock),
+    var(--eastern-blue)
+  );
+  background-size: 200%;
+  background-clip: text;
+  animation: shine 2s linear infinite;
+  font-family: "Orbitron";
+  letter-spacing: 4px;
+  font-size: 56px;
+}
+
+#sobre-mim #sobreMimTexto {
+  font-family: "Space Grotesk";
+  color: white;
+  font-size: 40px;
+}
+
+#sobre-mim #aviso {
+  color: var(--shamrock);
+  opacity: 0.5;
+  font-family: "Orbitron";
+  font-size: 20px;
+}
+
+#sobre-mim #sobreMimTitulo,
+#sobre-mim #sobreMimTexto {
+  opacity: 1;
+}
+
+@keyframes animacaoAparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recomendacaoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+  gap: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.recomendacaoWeb, .recomendacaoDesign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.recomendacaoWebConteudo, .recomendacaoDesignConteudo {
+  align-content: center;
+}
+
+.recomendacaoContainer .recomendacaoWebConteudo h1, .recomendacaoContainer .recomendacaoDesignConteudo h1 {
+  font-family: "Orbitron";
+  margin-bottom: 10px;
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--eastern-blue),
+    var(--shamrock),
+    var(--eastern-blue)
+  );
+  background-size: 200%;
+  background-clip: text;
+  animation: shine 2s linear infinite;
+}
+
+.recomendacaoDesignConteudo p, .recomendacaoWebConteudo p {
+  font-family: "Space Grotesk";
+  font-size: 20px;
+}
+
+#sobre-mim h2,
+.recomendacaoWeb,
+.recomendacaoDesign {
+  opacity: 1;
+}
+
+#sobre-mim h2 {
+  font-family: "Orbitron";
+  color: white;
+  font-size: 32px;
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+
+.contato {
+  color: white;
+}
+
+.contato h1 {
+  font-family: "Orbitron";
+  margin-bottom: 10px;
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--eastern-blue),
+    var(--shamrock),
+    var(--eastern-blue)
+  );
+  background-size: 200%;
+  background-clip: text;
+  animation: shine 2s linear infinite;
+  text-align: center;
+  font-size: 36px;
+}
+
+.contato .links {
+  display: flex;
+  justify-content: center;
+}
+
+.contato a {
+  padding: 10px;
+  border: 2px solid rgb(1, 99, 1);
+  color: green;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Space Grotesk";
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+  transform: skew(-40deg);
+  box-shadow: 11px 11px 0px rgb(3, 201, 3);
+  width: 250px;
+  text-align: center;
+  height: 70px;
+}
+
+.contato a:hover {
+  color: white;
+  border: 2px solid white;
+  box-shadow: 15px 15px 0px rgb(3, 201, 3);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    background: url(https://i.ibb.co/yB5Qp1yv/IMG-20251012-224325.png);
+    background-size: cover;
+    /* empilha colunas em mobile para mostrar esquerda + direita */
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-top: 100px;
+  }
+  
+  .hero .esquerda {
+    padding: 10px;
+    height: 50vh;
+  }
+
+  .hero .esquerda p {
+    font-size: 35px;
+  }
+
+  .hero .esquerda a {
+    padding: 10px;
+    font-size: 26px;
+  }
+
+  /* mostrar o embed também no mobile */
+  .hero .direita {
+    display: flex;
+    padding: 10px 20px 40px;
+    margin-top: 80px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hero .direita iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+
+  #sobre-mim {
+    padding: 10px;
+  }
+
+  #sobre-mim #sobreMimTitulo {
+    font-size: 30px;
+  }
+
+  #sobre-mim #sobreMimTexto {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .recomendacaoContainer {
+    display: block;
+    gap: 0px;
+  }
+
+  .recomendacaoContainer .imageContainer {
+    width: 67px;
+  }
+
+  .recomendacaoWeb {
+    margin-bottom: 20px;
+  }
+
+  .recomendacaoDesignConteudo h1, .recomendacaoWebConteudo h1{
+    font-size: 25px;
+  }
+
+  /* Ajustes mobile para novos elementos animados */
+  #sobre-mim h2 {
+    font-size: 24px;
+    margin: 20px 0 15px 0;
+  }
+}
+
+.wrapperSobreMim {
+  height: 90px;
+}
+
+.wrapperBottom {
+  height: 25vh;
+  width: 100vw;
+}
