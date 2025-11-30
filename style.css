@@ -145,7 +145,7 @@ header h1 {
   flex-direction: column;
 }
 
-.hero .direita iframe {
+.hero .direita model-viewer {
   width: 550px;
   height: 600px;
 }
