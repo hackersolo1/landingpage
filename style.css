@@ -161,6 +161,30 @@ header h1 {
   animation-delay: 2s;
 }
 
+.hero .direita .stopAutoRotate {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1.5px solid var(--shamrock);
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-family: "Space Grotesk";
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  animation: animacaoAparecer 1s ease-in-out 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 2.5s;
+}
+
+.hero .direita .stopAutoRotate:hover {
+  background: var(--shamrock);
+  color: var(--preto-100);
+  box-shadow: 0px 0px 10px var(--shamrock);
+}
+
 #sobre-mim {
   width: 100vw;
   align-content: center;
