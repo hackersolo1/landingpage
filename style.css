@@ -185,6 +185,16 @@ header h1 {
   box-shadow: 0px 0px 10px var(--shamrock);
 }
 
+.hero .direita .stopAutoRotate i {
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #sobre-mim {
   width: 100vw;
   align-content: center;
