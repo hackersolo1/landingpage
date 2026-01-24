@@ -11,8 +11,11 @@
   <link rel="preload" href="https://agenciath2.com/_2025/wp-content/themes/agencia_th2/img/bg-featured-home.png"
     as="image">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -23,16 +26,20 @@
   <main>
     <section class="hero">
       <div class="esquerda">
-        <p> Da ideia, ao pixel perfeito.</p>
-        <p>Comigo, sua imaginação ganha vida em um site completo.</p>
-        <a href="#wrapperSobreMim">Saiba mais</a>
+        <p>Seu negócio precisa estar online.</p>
+        <p>Transformo sua ideia em um site profissional que atrai clientes e gera resultados.</p>
+        <div class="cta-container">
+          <a href="https://wa.me/5541998656934" class="cta-principal">Quero meu site agora</a>
+          <a href="#wrapperSobreMim" class="cta-secundario">Ver como funciona</a>
+        </div>
       </div>
       <div class="direita">
         <model-viewer src="modelos/sci_-_fi_computer_game_ready.glb" alt="Computador 3D" camera-controls auto-rotate
           enviroment-image="none" shadow-intesity="0" interaction-prompt="none" class="model3d"
           auto-rotate-delay="0"></model-viewer>
+        <button class="stop" title="Parar a rotação automática"><i
+            class="fa-solid fa-rotate rotateI rotating"></i></button>
         <p>Esse é um elemento 3D. Mexa para ver-lo melhor :)</p>
-        <button class="stopAutoRotate"><i class="fa-solid fa-rotate rotateI"></i></button>
       </div>
 
     </section>
@@ -70,6 +77,46 @@
       </div>
     </section>
 
+    <div class="wrapperProjetos" id="wrapperProjetos"></div>
+    <section id="projetos">
+      <h1 id="projetosTitulo">Meus Projetos</h1>
+      <div class="projetos-grid">
+        <!-- Projeto 1 -->
+        <div class="projeto-card">
+          <div class="projeto-img"></div>
+          <div class="projeto-info">
+            <h3>BuscaPeça</h3>
+            <p>O BuscaPeças é um catálogo interativo de peças mecânicas e componentes industriais, desenvolvido com foco
+              em empresas e profissionais da área. </p>
+            <a href="https://hackersolo1.github.io/buscapeca/" class="projeto-link" target="_blank">Ver Projeto</a>
+          </div>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="projeto-card">
+          <div class="projeto-img"></div>
+          <div class="projeto-info">
+            <h3>Love Letter Editor</h3>
+            <p>O Love Letter Editor é uma ferramenta online desenvolvida para auxiliar na criação e edição de cartas com
+              um toque romântico e personalizado. O projeto permite que os usuários escrevam, formateiem e personalizem
+              suas mensagens de forma simples e intuitiva, com recursos que agregam valor sentimental à experiência.</p>
+            <a href="https://hackersolo1.github.io/lovelettereditor/" class="projeto-link" target="_blank">Ver
+              Projeto</a>
+          </div>
+        </div>
+        <!-- Projeto 3 -->
+        <div class="projeto-card">
+          <div class="projeto-img"></div>
+          <div class="projeto-info">
+            <h3>Frutivos</h3>
+            <p>Frutivos é um site interativo onde você combina até três sabores por produto. Para cada sabor você vê
+              nome, descrição e imagem do suco — e pode explorar a garrafa em 3D para conferir detalhes antes de
+              finalizar.</p>
+            <a href="https://hackersolo1.github.io/frutivos/" class="projeto-link" target="_blank">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contato">
       <h1>Me chama para batermos um papo :) </h1>
       <div class="links">
@@ -78,7 +125,8 @@
     </section>
   </main>
   <div class="wrapperBottom"></div>
-  <script src="script.js"></script>
+
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
