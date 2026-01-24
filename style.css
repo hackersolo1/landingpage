@@ -510,6 +510,7 @@ header h1 {
     grid-template-columns: 1fr;
     height: auto;
     padding-top: 100px;
+    gap: 300px;
   }
 
   .hero .esquerda {
