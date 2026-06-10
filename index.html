@@ -5,128 +5,272 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>LandingPage</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preload" href="https://i.ibb.co/yB5Qp1yv/IMG-20251012-224325.png" as="image">
-  <link rel="preload" href="https://agenciath2.com/_2025/wp-content/themes/agencia_th2/img/bg-featured-home.png"
-    as="image">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <title>Stacoviaki — Criação de Sites Profissionais para o seu Negócio</title>
+  <meta name="description"
+    content="Desenvolvedor web freelancer. Transformo a sua ideia em um site profissional, rápido e sob medida — com design criado em tempo real, junto com você." />
+  <meta name="author" content="Stacoviaki" />
+  <meta name="theme-color" content="#05080b" />
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Stacoviaki — Sites Profissionais sob Medida" />
+  <meta property="og:description"
+    content="Transformo a sua ideia em um site profissional que atrai clientes e gera resultados." />
+  <meta property="og:image" content="https://i.ibb.co/yB5Qp1yv/IMG-20251012-224325.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon em SVG (sem arquivo externo) -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2305080b'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2335e18f'%3ES%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="https://i.ibb.co/yB5Qp1yv/IMG-20251012-224325.png" as="image" />
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <header>
-    <h1>Stacoviaki</h1>
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#topo" class="brand">Stacoviaki</a>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#sobre-mim">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <a href="https://wa.me/5541998656934" class="nav-cta" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Quero meu site
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
+  <main id="topo">
+    <!-- ===================== HERO ===================== -->
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
       <div class="esquerda">
-        <p>Seu negócio precisa estar online.</p>
-        <p>Transformo sua ideia em um site profissional que atrai clientes e gera resultados.</p>
-        <div class="cta-container">
-          <a href="https://wa.me/5541998656934" class="cta-principal">Quero meu site agora</a>
-          <a href="#wrapperSobreMim" class="cta-secundario">Ver como funciona</a>
+        <span class="badge reveal">
+          <span class="badge-dot"></span> Desenvolvedor Web Freelancer
+        </span>
+        <h1 class="reveal">Seu negócio precisa estar <span class="grad-text">online.</span></h1>
+        <p class="hero-sub reveal">
+          Transformo a sua ideia em um site profissional que atrai clientes e gera resultados.
+        </p>
+
+        <div class="cta-container reveal">
+          <a href="https://wa.me/5541998656934" class="cta-principal" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Quero meu site agora
+          </a>
+          <a href="#projetos" class="cta-secundario">Ver projetos</a>
         </div>
+
+        <ul class="hero-stats reveal" aria-label="Destaques">
+          <li><strong>+1 ano</strong><span>de experiência</span></li>
+          <li><strong>3+</strong><span>projetos entregues</span></li>
+          <li><strong>Design</strong><span>em tempo real</span></li>
+        </ul>
       </div>
+
       <div class="direita">
-        <model-viewer src="modelos/sci_-_fi_computer_game_ready.glb" alt="Computador 3D" camera-controls auto-rotate
-          enviroment-image="none" shadow-intesity="0" interaction-prompt="none" class="model3d"
-          auto-rotate-delay="0"></model-viewer>
-        <button class="stop" title="Parar a rotação automática"><i
-            class="fa-solid fa-rotate rotateI rotating"></i></button>
-        <p>Esse é um elemento 3D. Mexa para ver-lo melhor :)</p>
+        <div class="model-wrap reveal">
+          <model-viewer
+            src="https://hackersolo1.github.io/landingpage/modelos/sci_-_fi_computer_game_ready.glb"
+            alt="Modelo 3D de um computador sci-fi" camera-controls auto-rotate auto-rotate-delay="0"
+            loading="eager" reveal="auto" shadow-intensity="0.6" exposure="1.1"
+            interaction-prompt="none" class="model3d"></model-viewer>
+          <button class="stop" title="Pausar/retomar a rotação automática" aria-label="Pausar rotação automática">
+            <i class="fa-solid fa-rotate rotateI rotating"></i>
+          </button>
+        </div>
+        <p class="model-hint">Elemento 3D interativo — arraste para girar 🖱️</p>
       </div>
 
+      <a href="#sobre-mim" class="scroll-cue" aria-label="Rolar para baixo">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
     </section>
 
-    <div class="wrapperSobreMim" id="wrapperSobreMim"></div>
-    <section id="sobre-mim">
-      <h1 id="sobreMimTitulo">Sobre mim</h1>
-      <p id="sobreMimTexto">
-        Sou um desenvolvedor web apaixonado por tecnologia e em constante
-        aprendizado. Há mais de um ano, mergulho nas novidades do setor para
-        construir projetos que não apenas atendam às expectativas, mas que
-        também estejam sempre à frente, com as tecnologias mais recentes.
-      </p>
-      <h2>Porque selecionar meus serviços?</h2>
-      <div class="recomendacaoContainer">
-        <div class="recomendacaoWeb">
-          <div class="imageContainer">
-            <img src="https://agenciath2.com/_2025/wp-content/uploads/2025/01/icon-solucoes-1.svg" alt="WebIcon">
-          </div>
-          <div class="recomendacaoWebConteudo">
-            <h1>Seu site, seu visual</h1>
-            <p>Aqui seu site ganha uma identidade única, do seu jeito, do seu gosto, da sua imaginação.</p>
-          </div>
-        </div>
-        <div class="recomendacaoDesign">
-          <div class="imageContainer">
-            <img src="https://agenciath2.com/_2025/wp-content/uploads/2025/01/icon-solucoes-3.svg" alt="figmaIcon"
-              width="67px">
-          </div>
-          <div class="recomendacaoDesignConteudo">
-            <h1>Criação de Design em tempo real</h1>
-            <p>Chega de rascunhos! Crio seu design em tempo real, com você participando em cada passo.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ===================== SOBRE MIM ===================== -->
+    <section id="sobre-mim" class="section">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Sobre mim</span>
+        <h2 class="section-title reveal">Quem vai construir o seu site</h2>
+        <p class="section-lead reveal">
+          Sou um desenvolvedor web apaixonado por tecnologia e em constante aprendizado. Há mais de um ano
+          mergulho nas novidades do setor para construir projetos que não apenas atendam às expectativas, mas
+          que estejam sempre à frente, com as tecnologias mais recentes.
+        </p>
 
-    <div class="wrapperProjetos" id="wrapperProjetos"></div>
-    <section id="projetos">
-      <h1 id="projetosTitulo">Meus Projetos</h1>
-      <div class="projetos-grid">
-        <!-- Projeto 1 -->
-        <div class="projeto-card">
-          <div class="projeto-img"></div>
-          <div class="projeto-info">
-            <h3>BuscaPeça</h3>
-            <p>O BuscaPeças é um catálogo interativo de peças mecânicas e componentes industriais, desenvolvido com foco
-              em empresas e profissionais da área. </p>
-            <a href="https://hackersolo1.github.io/buscapeca/" class="projeto-link" target="_blank">Ver Projeto</a>
-          </div>
-        </div>
-        <!-- Projeto 2 -->
-        <div class="projeto-card">
-          <div class="projeto-img"></div>
-          <div class="projeto-info">
-            <h3>Love Letter Editor</h3>
-            <p>O Love Letter Editor é uma ferramenta online desenvolvida para auxiliar na criação e edição de cartas com
-              um toque romântico e personalizado. O projeto permite que os usuários escrevam, formateiem e personalizem
-              suas mensagens de forma simples e intuitiva, com recursos que agregam valor sentimental à experiência.</p>
-            <a href="https://hackersolo1.github.io/lovelettereditor/" class="projeto-link" target="_blank">Ver
-              Projeto</a>
-          </div>
-        </div>
-        <!-- Projeto 3 -->
-        <div class="projeto-card">
-          <div class="projeto-img"></div>
-          <div class="projeto-info">
-            <h3>Frutivos</h3>
-            <p>Frutivos é um site interativo onde você combina até três sabores por produto. Para cada sabor você vê
-              nome, descrição e imagem do suco — e pode explorar a garrafa em 3D para conferir detalhes antes de
-              finalizar.</p>
-            <a href="https://hackersolo1.github.io/frutivos/" class="projeto-link" target="_blank">Ver Projeto</a>
-          </div>
+        <h3 class="subheading reveal">Por que escolher os meus serviços?</h3>
+        <div class="cards-grid">
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h4>Seu site, seu visual</h4>
+            <p>Aqui o seu site ganha uma identidade única — do seu jeito, do seu gosto, da sua imaginação.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h4>Design em tempo real</h4>
+            <p>Chega de rascunhos! Crio o seu design ao vivo, com você participando de cada passo.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h4>Rápido e responsivo</h4>
+            <p>Sites leves que carregam rápido e ficam perfeitos no celular, tablet e computador.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="contato">
-      <h1>Me chama para batermos um papo :) </h1>
-      <div class="links">
-        <a href="https://wa.me/5541998656934" class="whatsapp">WhatsApp</a>
+    <!-- ===================== PROJETOS ===================== -->
+    <section id="projetos" class="section section-alt">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Portfólio</span>
+        <h2 class="section-title reveal">Meus projetos</h2>
+        <p class="section-lead reveal">Alguns trabalhos reais — clique para explorar ao vivo.</p>
+
+        <div class="projetos-grid">
+          <!-- Projeto 1 -->
+          <article class="projeto-card reveal">
+            <a class="projeto-preview" href="https://hackersolo1.github.io/buscapeca/" target="_blank"
+              rel="noopener" aria-label="Abrir projeto BuscaPeça">
+              <iframe src="https://hackersolo1.github.io/buscapeca/" title="Prévia do projeto BuscaPeça"
+                loading="lazy" tabindex="-1" scrolling="no"></iframe>
+              <span class="preview-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ao vivo</span>
+            </a>
+            <div class="projeto-info">
+              <h3>BuscaPeça</h3>
+              <p>Catálogo interativo de peças mecânicas e componentes industriais, com foco em empresas e
+                profissionais da área.</p>
+              <a href="https://hackersolo1.github.io/buscapeca/" class="projeto-link" target="_blank"
+                rel="noopener">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="projeto-card reveal">
+            <a class="projeto-preview" href="https://hackersolo1.github.io/lovelettereditor/" target="_blank"
+              rel="noopener" aria-label="Abrir projeto Love Letter Editor">
+              <iframe src="https://hackersolo1.github.io/lovelettereditor/" title="Prévia do Love Letter Editor"
+                loading="lazy" tabindex="-1" scrolling="no"></iframe>
+              <span class="preview-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ao vivo</span>
+            </a>
+            <div class="projeto-info">
+              <h3>Love Letter Editor</h3>
+              <p>Ferramenta online para criar e personalizar cartas com um toque romântico — escreva, formate e
+                personalize as suas mensagens de forma simples e intuitiva.</p>
+              <a href="https://hackersolo1.github.io/lovelettereditor/" class="projeto-link" target="_blank"
+                rel="noopener">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="projeto-card reveal">
+            <a class="projeto-preview" href="https://hackersolo1.github.io/frutivos/" target="_blank"
+              rel="noopener" aria-label="Abrir projeto Frutivos">
+              <iframe src="https://hackersolo1.github.io/frutivos/" title="Prévia do projeto Frutivos"
+                loading="lazy" tabindex="-1" scrolling="no"></iframe>
+              <span class="preview-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ao vivo</span>
+            </a>
+            <div class="projeto-info">
+              <h3>Frutivos</h3>
+              <p>Site interativo onde você combina até três sabores por produto, vê nome, descrição e imagem de
+                cada suco — e explora a garrafa em 3D antes de finalizar.</p>
+              <a href="https://hackersolo1.github.io/frutivos/" class="projeto-link" target="_blank"
+                rel="noopener">Ver projeto <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMO FUNCIONA ===================== -->
+    <section id="processo" class="section">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Processo</span>
+        <h2 class="section-title reveal">Como funciona</h2>
+        <p class="section-lead reveal">Do primeiro contato ao site no ar — simples e transparente.</p>
+
+        <ol class="processo-grid">
+          <li class="processo-step reveal">
+            <span class="step-num">01</span>
+            <h4>Conversa</h4>
+            <p>A gente bate um papo pelo WhatsApp para entender a sua ideia e os seus objetivos.</p>
+          </li>
+          <li class="processo-step reveal">
+            <span class="step-num">02</span>
+            <h4>Design ao vivo</h4>
+            <p>Crio o layout em tempo real, com você acompanhando e dando a sua opinião.</p>
+          </li>
+          <li class="processo-step reveal">
+            <span class="step-num">03</span>
+            <h4>Desenvolvimento</h4>
+            <p>Transformo o design aprovado em um site rápido, responsivo e funcional.</p>
+          </li>
+          <li class="processo-step reveal">
+            <span class="step-num">04</span>
+            <h4>Publicação</h4>
+            <p>Coloco o seu site no ar, pronto para atrair os primeiros clientes.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="contato" class="section section-alt">
+      <div class="section-inner contato-inner">
+        <span class="eyebrow reveal">Contato</span>
+        <h2 class="section-title reveal">Vamos tirar a sua ideia do papel?</h2>
+        <p class="section-lead reveal">Me chama para batermos um papo — sem compromisso. 🙂</p>
+        <div class="links reveal">
+          <a href="https://wa.me/5541998656934" class="whatsapp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   </main>
-  <div class="wrapperBottom"></div>
 
-  <script type="text/javascript" src="js/script.js"></script>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="#topo" class="brand">Stacoviaki</a>
+      <p class="footer-tag">Sites profissionais sob medida para o seu negócio.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/5541998656934" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://github.com/hackersolo1" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <p class="footer-copy">© <span id="ano"></span> Stacoviaki. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5541998656934" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>
